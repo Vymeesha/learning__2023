@@ -11,7 +11,7 @@ struct Data
 };
 int extract(struct Data d[],int *num)
 {
-    FILE *fptr=fopen("data.csv","w");
+    FILE *fptr=fopen("data.csv","r");
     if(fptr==NULL)
     {
         printf("Cannot open file");
@@ -53,6 +53,7 @@ int main()
 {
     struct Data d[MAX];
     int num;
+    printf("Enter no.of entries\n:");
     scanf("%d",&num);
     extract(d,&num);
     display(d,num);
